@@ -4,7 +4,7 @@ LMX120HM_Kernel_Source Android Pie 4.4
 Use an explicit absolute repository path when running commands:
 
 ```sh
-export REPO_DIR="<absolute/path/to/LMX120HM_Kernel_Source>"
+export REPO_DIR="/path/to/LMX120HM_Kernel_Source"
 cd "$REPO_DIR"
 ```
 
