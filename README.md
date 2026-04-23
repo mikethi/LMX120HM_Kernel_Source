@@ -1,21 +1,15 @@
 # LMX120HM_Kernel_Source
 LMX120HM_Kernel_Source Android Pie 4.4
 
-Use an explicit absolute repository path when running commands:
-
-```sh
-export REPO_DIR="/path/to/LMX120HM_Kernel_Source" # replace with your local repo path
-cd "$REPO_DIR"
-```
-
-Create and run a local helper script with a heredoc:
+Create and run a local helper script with a heredoc (using an explicit absolute path):
 
 ```sh
 bash <<'SCRIPT'
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd "${REPO_DIR:?REPO_DIR environment variable must be set before running this script}"
+REPO_DIR="/absolute/path/to/LMX120HM_Kernel_Source" # replace with your local repo path
+cd "$REPO_DIR"
 
 echo "Using repository at: $PWD"
 mkdir -p out
