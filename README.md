@@ -4,7 +4,7 @@ LMX120HM_Kernel_Source Android Pie 4.4
 Use an explicit absolute repository path when running commands:
 
 ```sh
-export REPO_DIR="/path/to/LMX120HM_Kernel_Source"
+export REPO_DIR="/path/to/LMX120HM_Kernel_Source" # replace with your local repo path
 cd "$REPO_DIR"
 ```
 
@@ -22,5 +22,5 @@ mkdir -p out
 echo "Prepared output directory: $PWD/out"
 SCRIPT
 
-bash /tmp/lmx120hm_setup.sh
+bash /tmp/lmx120hm_setup.sh && rm /tmp/lmx120hm_setup.sh
 ```
