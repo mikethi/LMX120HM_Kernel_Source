@@ -11,7 +11,7 @@ cd "$REPO_DIR"
 Create and run a local helper script with a heredoc:
 
 ```sh
-cat <<'SCRIPT' > /tmp/lmx120hm_setup.sh
+bash <<'SCRIPT'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -21,6 +21,4 @@ echo "Using repository at: $PWD"
 mkdir -p out
 echo "Prepared output directory: $PWD/out"
 SCRIPT
-
-bash /tmp/lmx120hm_setup.sh && rm /tmp/lmx120hm_setup.sh
 ```
