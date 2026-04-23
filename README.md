@@ -4,7 +4,7 @@ LMX120HM_Kernel_Source Android Pie 4.4
 Use an explicit absolute repository path when running commands:
 
 ```sh
-REPO_DIR="/home/runner/work/LMX120HM_Kernel_Source/LMX120HM_Kernel_Source"
+REPO_DIR="/absolute/path/to/LMX120HM_Kernel_Source" # update this path
 cd "$REPO_DIR"
 ```
 
@@ -15,10 +15,12 @@ cat <<'SCRIPT' > /tmp/lmx120hm_setup.sh
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_DIR="/home/runner/work/LMX120HM_Kernel_Source/LMX120HM_Kernel_Source"
+REPO_DIR="/absolute/path/to/LMX120HM_Kernel_Source" # update this path
 cd "$REPO_DIR"
 
 echo "Using repository at: $PWD"
+mkdir -p out
+echo "Prepared output directory: $PWD/out"
 SCRIPT
 
 bash /tmp/lmx120hm_setup.sh
